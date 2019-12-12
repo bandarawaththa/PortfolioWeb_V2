@@ -6,7 +6,18 @@
 
 /* import global styling */ 
 @import url(./partials/_global.css);
+/* start preloader */
+#preloader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
 
+#preloader > img{
+    width: 100%;
+    height: 100%;
+}
+/* end preloader */
 /* start navigation */
 .header_area .main-menu .navbar .navbar-brand{
     padding: 0 1rem 0 5rem;
@@ -39,6 +50,112 @@
     -webkit-text-fill-color: transparent;
 }
 /* end navigation */
+/* MyPic Area */
+.mypic{
+    position: fixed;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    right: 5%;
+    bottom: 10%;
+    /*overflow: hidden;*/
+    z-index: 5;
+}
+
+.mypic>img{
+    width: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 100%;
+    z-index: 6;
+    position: absolute;
+}
+
+.mypic>img:hover{
+    width: 80%;
+}
+
+.mypic .blurred{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    z-index: 1;
+    filter: url(#goo);
+}
+
+.mypic .blurred::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: darkblue;
+    border-radius: 100%;
+    transition: 1.6s cubic-bezier(0,2,.61,-0.05);
+}
+
+.mypic .blurred::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: darkblue;
+    border-radius: 100%;
+    transition: 1.8s cubic-bezier(0,2,.61,-0.05);
+}
+
+.mypic .blurred > span > img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.mypic .blurred > span:nth-of-type(1),
+.mypic .blurred > span:nth-of-type(2){
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: darkblue;
+    border-radius: 100%;
+    transition: 1.9s cubic-bezier(0,2,.61,-0.05);
+}
+
+.mypic:hover .blurred::after{
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 90px;
+}
+
+.mypic:hover .blurred::before{
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+}
+
+.mypic:hover .blurred > span:nth-of-type(1){
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    left: -40px;
+}
+
+.mypic:hover .blurred > span:nth-of-type(2){
+    width: 50px;
+    height: 50px;
+    top: 80px;
+    left: -40px;
+}
+/* end MyPic */
 /* Banner Area */
 .site-main .site-banner {
     /*background: url(../img/background/easy-shark-drawings-shark-drawing-easy-easy-shark-drawings-bull-shark-drawing-easy-step-by-step-how-to-draw-easy-shark-drawings-step-by-step.jpg) no-repeat 0% 50%;*/
@@ -107,10 +224,12 @@
     height: 100px;
     cursor: pointer;
     transition: transform .4s ease;
+    font-size: 50px;
+    color: purple;
 }
 
-.site-main .brand-area .first-row .col-lg-4 > .single-brand > img{
-    width: 20%;
+.site-main .brand-area .first-row .col-lg-4 > .single-brand > i{
+    width: 100%
 }
 
 .site-main .brand-area .first-row .col-lg-4 > .single-brand:hover{
@@ -118,7 +237,7 @@
     transform: scale(1.1);
 }
 
-.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover > img{
+.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover > i{
     filter: brightness(0.15);
 }
 
@@ -188,14 +307,8 @@
 .site-main > .services-area .services:hover{
     box-shadow: var(--box-shadow);
 }
-
-
-
-/* End Services Area */ 
-
-
-/* Project Area */ 
-
+/* End Services Area */
+/* Project Area */
 .site-main .project-area{
     padding: 4rem 0;
 }
@@ -218,8 +331,6 @@
 .site-main .project-area .grid .our-project .img a:hover img{
     filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
 }
-
-
 /* End Project Area */ 
 
 

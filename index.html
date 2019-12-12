@@ -20,8 +20,19 @@
     <link rel="stylesheet" href="./css/style.css">
     <!--  Responsive css file  -->
     <link rel="stylesheet" href="./css/responsive.css">
+    <style>
+        body{
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+    </style>
 </head>
 <body>
+<!--  ======================= Start Preloader Area ============================== -->
+<div id="preloader">
+    <img src="img/preloader/Preloader.gif" alt="preloader">
+</div>
+<!--  ======================= End Preloader Area ============================== -->
 <!--  ======================= Start Header Area ============================== -->
 <header class="header_area">
     <div class="main-menu">
@@ -38,22 +49,22 @@
                         <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">about</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">portfolio</a>
+                        <a class="nav-link" href="#service">Workings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">pages</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">blog</a>
+                        <a class="nav-link" href="#">Comments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">contact</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -61,6 +72,25 @@
     </div>
 </header>
 <!--  ======================= End Header Area ============================== -->
+<!--  ======================= Start MyPic Area ============================== -->
+<div class="mypic">
+    <img src="img/fixedPics/4eaceb7f-1d08-428f-a5f2-fc730ba19d55.jpg" alt="myPic">
+    <div class="blurred">
+        <span><img src="img/fixedPics/4420b6f3-18a1-4d82-ae54-c99e88884af7.jpg" alt="myPic"></span>
+        <span><img src="img/fixedPics/a99d150e-4b27-46d6-b27c-2caef4b79983.jpg" alt="myPic"></span>
+    </div>
+    <svg>
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic"
+                                stdDeviation="10" result="name"/>
+                <feColorMatrix in="name" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -15 " result="aab"/>
+                <feBlend in="SourceGraphic" in2="aab"/>
+            </filter>
+        </defs>
+    </svg>
+</div>
+<!--  ======================= End MyPic Area ============================== -->
 <!--  ======================= Start Main Area ================================ -->
 <main class="site-main">
     <!--  ======================= Start Banner Area =======================  -->
@@ -131,47 +161,47 @@
                     <div class="first-row row">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
-                                <img src="img/skill/javalogo.png" alt="Brand-1 ">
+                                <i class="fab fa-java"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
-                                <img src="img/skill/mysqllogo.png" alt="Brand-2 ">
+                                <i class="fab fa-js-square"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
-                                <img src="img/skill/htmllogo.png" alt="Brand-3 ">
+                                <i class="fab fa-html5"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
-                                <img src="img/skill/css-3-logo.png" alt="Brand-4">
+                                <i class="fab fa-css3-alt"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
-                                <img src="img/skill/javascript-logo.png" alt="Brand-5 ">
+                                <i class="fab fa-bootstrap"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
-                                <img src="./img/brands/logo6.png" alt="Brand-6">
+                                <i class="fab fa-php"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
-                                <img src="./img/brands/logo7.png" alt="Brand-7 ">
+                                <i class="fab fa-angular"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
-                                <img src="./img/brands/logo8.png" alt="Brand-8 ">
+                                <i class="fab fa-react"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
-                                <img src="./img/brands/logo9.png" alt="Brand-9">
+                                <i class="fab fa-linux"></i>
                             </div>
                         </div>
                     </div>
@@ -182,15 +212,16 @@
                             <h2 class="p-3 years">1</h2>
                             <h2>
                                 <span>Year</span>
-                                <span>Experience</span>
-                                <span>Working</span>
+                                <span>Experienced</span>
+                                <span>Software Enginner</span>
                             </h2>
                         </div>
                         <div class="d-flex flex-row flex-wrap call-area">
                             <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
                             <div class="call-now">
-                                <a href="#" class="text-uppercase h4 font-roboto">Call Now</a>
+                                <a href="#" class="text-uppercase h4 font-roboto">Contact Me</a>
                                 <span class="font-roboto py-2">(+94)-710-33-77-99</span>
+                                <span class="font-roboto py-2">charakajanithbandarawaththa@gmail.com</span>
                             </div>
                         </div>
                         <div class="bg-panel"></div>
@@ -200,6 +231,221 @@
         </div>
     </section>
     <!--  ======================== End Brand Area ==============================  -->
+    <!--  ====================== Start Services Area =============================  -->
+    <section class="services-area" id="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center services-title">
+                    <h1 class="text-uppercase title-text">My Best Workings</h1>
+                    <p class="para">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have
+                        suffered alteration in some form, by injected humour
+                    </p>
+                </div>
+            </div>
+            <div class="container services-list">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="services">
+                            <div class="sevices-img text-center py-4">
+                                <img src="./img/services/s1.png" alt="Services-1">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>
+                                <p class="card-text text-secondary">
+                                    Some quick example text to build on the card
+                                    title and make up
+                                    the bulk of the card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="services">
+                            <div class="sevices-img text-center py-4">
+                                <img src="./img/services/s2.png" alt="Services-2">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase font-roboto">ux/ui desing</h5>
+                                <p class="card-text text-secondary">
+                                    Some quick example text to build on the card
+                                    title and make up
+                                    the bulk of the card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="services">
+                            <div class="sevices-img text-center py-4">
+                                <img src="./img/services/s3.png" alt="Services-3">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase font-roboto">web design</h5>
+                                <p class="card-text text-secondary">
+                                    Some quick example text to build on the card
+                                    title and make up
+                                    the bulk of the card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="services">
+                            <div class="sevices-img text-center py-4">
+                                <img src="./img/services/s4.png" alt="Services-4">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase font-roboto">seo optimize</h5>
+                                <p class="card-text text-secondary">
+                                    Some quick example text to build on the card
+                                    title and make up
+                                    the bulk of the card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  ====================== End Services Area =============================  -->
+    <!--  ======================= Project Area =============================  -->
+    <section class="project-area" id="projects">
+        <div class="container">
+            <div class="project-title pb-5">
+                <h1 class="text-uppercase title-h1">Recently Done Project</h1>
+                <h1 class="text-uppercase title-h1">Quality Work</h1>
+            </div>
+            <div class="button-group">
+                <button type="button" class="active" id="btn1" data-filter="*">All</button>
+                <button type="button" data-filter=".layout">Layout</button>
+                <button type="button" data-filter=".anim">Animation</button>
+                <button type="button" data-filter=".script">JavaScripts</button>
+                <button type="button" data-filter=".upcoming">Upcoming</button>
+            </div>
+            <div class="row grid">
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item layout">
+                    <div class="our-project">
+                        <div class="img">
+                            <a href="#about">
+                                <img src="./img/portfolio/hw1.png" alt="portfolio-1" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="title py-4">
+                            <h4 class="text-uppercase">Minimul Desing</h4>
+                            <span class="text-secondary">Latest, Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item anim">
+                    <div class="our-project">
+                        <div class="img">
+                            <a href="./img/portfolio/p2.jpg">
+                                <img src="./img/portfolio/p2.jpg" alt="portfolio-2" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="title py-4">
+                            <h4 class="text-uppercase">Paint Wall</h4>
+                            <span class="text-secondary">Popular, Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
+                    <div class="our-project">
+                        <div class="img">
+                            <a href="./img/portfolio/p3.jpg">
+                                <img src="./img/portfolio/p3.jpg" alt="portfolio-3" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="title py-4">
+                            <h4 class="text-uppercase">Female light</h4>
+                            <span class="text-secondary">Popular, Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+                    <div class="our-project">
+                        <div class="img">
+                            <a href="./img/portfolio/p4.jpg">
+                                <img src="./img/portfolio/p4.jpg" alt="portfolio-4" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="title py-4">
+                            <h4 class="text-uppercase">Fourth Air</h4>
+                            <span class="text-secondary">Upcoming, Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+                    <div class="our-project">
+                        <div class="img">
+                            <a href="./img/portfolio/p5.jpg">
+                                <img src="./img/portfolio/p5.jpg" alt="portfolio-5" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="title py-4">
+                            <h4 class="text-uppercase">Muliple fown</h4>
+                            <span class="text-secondary">Upcoming, Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                    <div class="our-project">
+                        <div class="img">
+                            <a href="./img/portfolio/p6.jpg">
+                                <img src="./img/portfolio/p6.jpg" alt="portfolio-6" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="title py-4">
+                            <h4 class="text-uppercase">Together sign</h4>
+                            <span class="text-secondary">Following, Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                    <div class="our-project">
+                        <div class="img">
+                            <a href="./img/portfolio/p7.jpg">
+                                <img src="./img/portfolio/p7.jpg" alt="portfolio-7" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="title py-4">
+                            <h4 class="text-uppercase">Green Heaven</h4>
+                            <span class="text-secondary">Following, Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                    <div class="our-project">
+                        <div class="img">
+                            <a href="./img/portfolio/p8.jpg">
+                                <img src="./img/portfolio/p8.jpg" alt="portfolio-8" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="title py-4">
+                            <h4 class="text-uppercase">Fly Male</h4>
+                            <span class="text-secondary">Following, Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+                    <div class="our-project">
+                        <div class="img">
+                            <a href="./img/portfolio/p9.jpg">
+                                <img src="./img/portfolio/p9.jpg" alt="portfolio-9" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="title py-4">
+                            <h4 class="text-uppercase">Camera Lens</h4>
+                            <span class="text-secondary">Upcoming, Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  ======================= End Project Area =============================  -->
 </main>
 <!--  ======================= End Main Area ================================ -->
 <!--  Jquery js file  -->
@@ -216,5 +462,17 @@
 <script src="./js/main.js"></script>
 <!--  typewrite js file  -->
 <script type="application/javascript"src="js/Typewrite.js"></script>
+<!--  Preloader scripts  -->
+<script>
+    $( window ).ready(function() {
+        $('#preloader').css({
+            "display": "none",
+        });
+        $('body').css({
+            "overflow-x": "show",
+            "overflow-y": "auto"
+        });
+    });
+</script>
 </body>
 </html>
