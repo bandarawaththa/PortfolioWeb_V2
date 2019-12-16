@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: black;
+            overflow: hidden;
+        }
+        body>div{
+            width: 10vw;
+            height: 10vh;
+            border: 2px solid red;
+            position: relative;
+            top: 45vh;
+            box-shadow: inset 8px 8px 33px 10px red;
+            animation: rider 1s infinite alternate-reverse;
+        }
+        @keyframes rider {
+            to{
+                margin: 1%;
+            }
+            from{
+                margin-left: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

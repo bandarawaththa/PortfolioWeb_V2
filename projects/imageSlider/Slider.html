@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            width: 1200px;
+            margin: 50px auto;
+        }
+        body div ul{
+            list-style: none;
+            display: flex;
+            animation: slide 50s infinite alternate-reverse;
+        }
+        body div {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        body div ul li img {
+            width: 1200px;
+            height: 500px;
+        }
+        @keyframes slide {
+            0%, 10%{
+                transform: translateX(0);
+            }
+            15%, 25%{
+                transform: translateX(-1200px);
+            }
+            30%, 40%{
+                transform: translateX(-2400px);
+            }
+            45%, 50%{
+                transform: translateX(-3600px);
+            }
+            55%, 60%{
+                transform: translateX(-4800px);
+            }
+            65%, 70%{
+                transform: translateX(-6000px);
+            }
+            75%, 85%{
+                transform: translateX(-7200px);
+            }
+            90%, 100%{
+                transform: translateX(-8400px);
+            }
+        }
+        body div ul:hover{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li><img src="img1.jpg" alt=""></li>
+        <li><img src="img2.png" alt=""></li>
+        <li><img src="img3.jpg" alt=""></li>
+        <li><img src="img4.jpg" alt=""></li>
+        <li><img src="img5.jpg" alt=""></li>
+        <li><img src="img6.jpg" alt=""></li>
+        <li><img src="img7.jpg" alt=""></li>
+        <li><img src="img8.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>

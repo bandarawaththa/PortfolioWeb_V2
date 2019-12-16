@@ -1,0 +1,41 @@
+body{
+    overflow: hidden;
+}
+.container {
+    width: 300px;
+    overflow: hidden;
+    margin: 50px auto 0 auto;
+}
+.container > h4{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    font-size: 25px;
+    background: purple;
+}
+.container .box{
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 1px solid purple;
+    font-size: 85px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    color: purple;
+}
+.container .box:hover{
+    background: purple;
+    color: white;
+}
+#playButton{
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 20%;
+}
+#playButton > div:hover{
+    background: white;
+    color: purple;
+}
