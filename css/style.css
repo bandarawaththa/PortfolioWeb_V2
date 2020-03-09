@@ -1,22 +1,59 @@
 /* import fonts from fonts.css file */
-@import url(./fonts.css);
-
-/* css variables */ 
+/*@import url(./fonts.css);*/
+/* css variables */
 @import url(./partials/_variables.css);
-
-/* import global styling */ 
+/* Dark Mode */
+@import url(../darkMode/DarkButton.css);
+/* import global styling */
 @import url(./partials/_global.css);
+
+/* Start Scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: purple;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: darkblue;
+}
+
+/* End Scroll bar */
 /* start preloader */
 #preloader{
+    background: white;
     position: fixed;
     width: 100vw;
     height: 100vh;
+    z-index: 5;
+}
+
+body {
+    overflow: hidden;
+}
+
+header {
+    display: none;
 }
 
 #preloader > img{
     width: 100%;
     height: 100%;
 }
+
+/*footer,main,header {
+    display: none;
+}*/
 /* end preloader */
 /* start navigation */
 .header_area .main-menu .navbar .navbar-brand{
@@ -38,6 +75,10 @@
     color: var(--title-color);
 }
 
+.header_area .main-menu .navbar-nav a {
+    cursor: pointer;
+}
+
 .header_area .main-menu .navbar-nav .active a{
     background: var(--gradient-color);
     -webkit-background-clip: text;
@@ -50,119 +91,13 @@
     -webkit-text-fill-color: transparent;
 }
 /* end navigation */
-/* MyPic Area */
-.mypic{
-    position: fixed;
-    border-radius: 100%;
-    width: 100px;
-    height: 100px;
-    right: 5%;
-    bottom: 10%;
-    /*overflow: hidden;*/
-    z-index: 5;
-}
-
-.mypic>img{
-    width: 100%;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 100%;
-    z-index: 6;
-    position: absolute;
-}
-
-.mypic>img:hover{
-    width: 80%;
-}
-
-.mypic .blurred{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    z-index: 1;
-    filter: url(#goo);
-}
-
-.mypic .blurred::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: darkblue;
-    border-radius: 100%;
-    transition: 1.6s cubic-bezier(0,2,.61,-0.05);
-}
-
-.mypic .blurred::after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: darkblue;
-    border-radius: 100%;
-    transition: 1.8s cubic-bezier(0,2,.61,-0.05);
-}
-
-.mypic .blurred > span > img{
-    width: 100%;
-    border-radius: 100%;
-}
-
-.mypic .blurred > span:nth-of-type(1),
-.mypic .blurred > span:nth-of-type(2){
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 0;
-    left: 0;
-    background-color: darkblue;
-    border-radius: 100%;
-    transition: 1.9s cubic-bezier(0,2,.61,-0.05);
-}
-
-.mypic:hover .blurred::after{
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    left: 90px;
-}
-
-.mypic:hover .blurred::before{
-    width: 80px;
-    height: 80px;
-    top: 50%;
-    left: 50%;
-}
-
-.mypic:hover .blurred > span:nth-of-type(1){
-    width: 60px;
-    height: 60px;
-    top: -20px;
-    left: -40px;
-}
-
-.mypic:hover .blurred > span:nth-of-type(2){
-    width: 50px;
-    height: 50px;
-    top: 80px;
-    left: -40px;
-}
-/* end MyPic */
 /* Banner Area */
 .site-main .site-banner {
     /*background: url(../img/background/easy-shark-drawings-shark-drawing-easy-easy-shark-drawings-bull-shark-drawing-easy-step-by-step-how-to-draw-easy-shark-drawings-step-by-step.jpg) no-repeat 0% 50%;*/
 }
 
 .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 20%;
     font-weight: 500;
 }
 
@@ -185,7 +120,7 @@
 }
 
 .site-main .site-banner .banner-image > img{
-    padding: 7rem 0;
+    padding: 2rem 0;
     width: 90rem;
 }
 /* End Banner Area */
@@ -282,7 +217,7 @@
     padding-left: 10rem;
 }
 /* End Brand Area */
-/* Services Area */ 
+/* Services Area */
 
 .site-main .services-area{
     padding: 7rem 2rem;
@@ -410,7 +345,7 @@
 /* Footer Area */
 footer.footer-area{
     padding: 5rem 0;
-    background: url(../img/background/footer-bg.png) no-repeat;
+    background: url(../img/background/bg-footer.png) no-repeat;
 }
 
 footer.footer-area .myPic > div > a > img{
@@ -418,17 +353,76 @@ footer.footer-area .myPic > div > a > img{
     border-radius: 100%;
 }
 
+footer.footer-area .myPic > div > a > img:hover {
+    animation: animate 5s linear infinite;
+}
+
 footer.footer-area .social h5{
     font: normal 500 23px/ 30px var(--roboto);
 }
 
-footer.footer-area .social a > i{
-    font-size:22px;
-    padding: 2rem;
-    color: var(--border-color);
+footer .mybtn {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px darkblue;
+    color: #000043;
+    overflow: hidden;
+    position: relative;
 }
 
-footer.footer-area .social a > i{
-    color: var(--primary-color);
+footer .mybtn i {
+    line-height: 70px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+.mybtn:hover i {
+    transform: scale(1.3);
+    color: white;
+}
+
+.mybtn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #000043;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.mybtn:hover::before {
+    animation: footerBtnAnimation 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes footerBtnAnimation {
+    0% {
+        left: -140%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 /* End Footer */ 

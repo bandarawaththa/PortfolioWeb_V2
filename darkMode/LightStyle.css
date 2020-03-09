@@ -1,0 +1,107 @@
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: purple;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darkblue;
+}
+
+#preloader {
+    background: white;
+}
+
+.header_area .main-menu .nav-item .nav-link {
+    color: var(--title-color);
+}
+
+.header_area .main-menu .navbar-nav .active a {
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header_area .main-menu .navbar-nav a:hover {
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.site-main .site-banner .site-title h3::after {
+    background: black;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand {
+    color: purple;
+}
+
+.site-main .brand-area .experience-area .years-area {
+    background: url(../img/background/client-info-bg.png) no-repeat 45px 20px;
+}
+
+.site-main .brand-area .experience-area .bg-panel {
+    background: #e029290a;
+}
+
+.site-main .brand-area .experience-area .years-area .years {
+    color: var(--primary-color2);
+}
+
+.site-main > .services-area .services {
+    background: rgba(248, 252, 253, 0.973);
+}
+
+.site-main .project-area .button-group button {
+    background: transparent;
+}
+
+.site-main .about-area .client {
+    background: #ffffff10;
+}
+
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span {
+    background: var(--primary-color);
+}
+
+.site-main .subscribe-us-area .subscribe {
+    background: url(../img/background/subscribe-bg.png) no-repeat;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title h4 {
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title p {
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input {
+    background: transparent;
+    color: white;
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input::placeholder {
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe form .btn-submit button {
+    background: whitesmoke;
+    color: #000;
+}
+
+footer .mybtn {
+    background: #f1f1f1;
+    box-shadow: 0 5px 15px -5px darkblue;
+    color: #000043;
+}
+
+.mybtn:hover i {
+    color: white;
+}
+
+.mybtn::before {
+    background: #000043;
+}

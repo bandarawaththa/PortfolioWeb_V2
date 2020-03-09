@@ -1,0 +1,176 @@
+body {
+    background: #000043;
+}
+
+::-webkit-scrollbar-track {
+    background: #000043;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: purple;
+}
+
+#preloader {
+    background: #000043;
+}
+
+.header_area .main-menu .nav-item .nav-link {
+    color: white;
+}
+
+.header_area .main-menu .navbar-nav .active a {
+    background: purple;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header_area .main-menu .navbar-nav a:hover {
+    background: purple;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.site-main .site-banner .site-title h3::after {
+    background: white;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand {
+    color: #000043;
+}
+
+.site-main .brand-area .experience-area .years-area {
+    background: url(../img/background/client-info-bg.png) no-repeat 45px 20px;
+}
+
+.site-main .brand-area .experience-area .bg-panel {
+    background: #e029290a;
+}
+
+.site-main .brand-area .experience-area .years-area .years {
+    color: white;
+}
+
+.site-main > .services-area .services {
+    background: darkblue;
+}
+
+.site-main .project-area .button-group button {
+    background: transparent;
+}
+
+.site-main .about-area .client {
+    background: #ffffff10;
+}
+
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span {
+    background: var(--primary-color);
+}
+
+.site-main .subscribe-us-area .subscribe {
+    background: url(../img/background/subscribe-bg.png) no-repeat;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title h4 {
+    color: #000043;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title p {
+    color: #000043;
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input {
+    background: transparent;
+    color: #000043;
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input::placeholder {
+    color: #000043;
+}
+
+.site-main .subscribe-us-area .subscribe form .btn-submit button {
+    color: #000043;
+    color: #000;
+}
+
+footer.footer-area {
+    background: url(../img/background/footer-bg.png) no-repeat;
+}
+
+footer .mybtn {
+    background: #000043;
+    box-shadow: 0 5px 15px -5px darkblue;
+    color: white;
+}
+
+.mybtn:hover i {
+    color: #000043;
+}
+
+.mybtn::before {
+    background: white;
+}
+
+.btnDark > i {
+    color: #000043;;
+}
+
+.btnDark .blurred {
+    background-color: white;
+}
+
+.btnDark .blurred::before {
+    background-color: white;
+}
+
+.btnDark.blurred::after {
+    background-color: white;
+}
+
+.btnDark .blurred > span:nth-of-type(1),
+.btnDark .blurred > span:nth-of-type(2) {
+    background-color: white;
+}
+
+.title-text {
+    color: white;
+}
+
+.about-title {
+    color: white;
+}
+
+#skills > div > div > div > div > div > div {
+    background: white;
+}
+
+.experience-area {
+    color: white;
+}
+
+.call-now {
+    background: #000043 !important;
+}
+
+.card-title {
+    color: white;
+}
+
+.project-title {
+    color: white;
+}
+
+button {
+    color: white;
+}
+
+#projectDivs {
+    color: white;
+}
+
+.about-title {
+    color: white;
+}

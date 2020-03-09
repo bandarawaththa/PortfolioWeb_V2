@@ -9,8 +9,6 @@
     <link rel="icon" href="img/background/icon.jpg" type="img/png">
     <!--  Bootstrap css file  -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <!--  font awesome icons  -->
-    <link rel="stylesheet" href="./css/all.min.css">
     <!--  Magnific Popup css file  -->
     <link rel="stylesheet" href="./vendor/Magnific-Popup/dist/magnific-popup.css">
     <!--  Owl-carousel css file  -->
@@ -20,24 +18,27 @@
     <link rel="stylesheet" href="./css/style.css">
     <!--  Responsive css file  -->
     <link rel="stylesheet" href="./css/responsive.css">
-    <style>
-        body{
-            overflow-x: hidden;
-            overflow-y: hidden;
-        }
-    </style>
+    <!--    Preloader css file-->
+    <link rel="stylesheet" href="preloader/style.css">
+    <!--  font awesome icons  -->
+    <link rel="stylesheet" href="fontawesome-free-5.12.1-web/css/all.min.css">
+    <!--    Dark Mode Styles-->
+    <link id="darkStyles" rel="stylesheet" href="darkMode/LightStyle.css">
 </head>
 <body>
 <!--  ======================= Start Preloader Area ============================== -->
 <div id="preloader">
-    <img src="img/preloader/Preloader.gif" alt="preloader">
+    <div class="p">LOADING</div>
 </div>
 <!--  ======================= End Preloader Area ============================== -->
 <!--  ======================= Start Header Area ============================== -->
 <header class="header_area">
     <div class="main-menu">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="http://ijse.lk/" target="_blank"><img src="img/background/ijse.png" alt="logo" class="navbar-image"></a>
+            <a class="navbar-brand" href="#" target="_parent"><img id="headerCharaka"
+                                                                   src="img/background/header/CharakaLight.png"
+                                                                   alt="logo"
+                                                                   class="navbar-image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,25 +47,25 @@
                 <div class="mr-auto"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" id="btnHome">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" id="btnAbout">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" id="btnSkills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Workings</a>
+                        <a class="nav-link" id="btnService">Workings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" id="btnProject">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#comment">Comments</a>
+                        <a class="nav-link" id="btnComment">Comments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" id="btnContact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -72,25 +73,26 @@
     </div>
 </header>
 <!--  ======================= End Header Area ============================== -->
-<!--  ======================= Start MyPic Area ============================== -->
-<div class="mypic">
-    <img src="img/fixedPics/4eaceb7f-1d08-428f-a5f2-fc730ba19d55.jpg" alt="myPic">
+<!--  ======================= Start Dark Mode Area ============================== -->
+<div id="darkMode" class="btnDark">
+    <i class="fas fa-lightbulb"></i>
     <div class="blurred">
-        <span><img src="img/fixedPics/4420b6f3-18a1-4d82-ae54-c99e88884af7.jpg" alt="myPic"></span>
-        <span><img src="img/fixedPics/a99d150e-4b27-46d6-b27c-2caef4b79983.jpg" alt="myPic"></span>
+        <span></span>
+        <span></span>
     </div>
     <svg>
         <defs>
             <filter id="goo">
                 <feGaussianBlur in="SourceGraphic"
                                 stdDeviation="10" result="name"/>
-                <feColorMatrix in="name" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -15 " result="aab"/>
+                <feColorMatrix in="name" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -15 "
+                               result="aab"/>
                 <feBlend in="SourceGraphic" in2="aab"/>
             </filter>
         </defs>
     </svg>
 </div>
-<!--  ======================= End MyPic Area ============================== -->
+<!--  ======================= End Dark Mode Area ============================== -->
 <!--  ======================= Start Main Area ================================ -->
 <main class="site-main">
     <!--  ======================= Start Banner Area =======================  -->
@@ -101,20 +103,26 @@
                     <h3 class="title-text">Hey</h3>
                     <h1 class="title-text text-uppercase">I am Charaka</h1>
                     <h4 class="title-text text-uppercase">
-                        <a class="typewrite" data-period="2000" data-type='[ "SOFTWARE ENGINEERING STUDENT", "FULL STACK DEVELOPER", "PROGRAMMER", "WEB DESIGNER", "FREELANCER" ]'>
+                        <a class="typewrite" data-period="2000"
+                           data-type='[ "SOFTWARE ENGINEERING STUDENT", "FULL STACK DEVELOPER", "PROGRAMMER", "WEB DESIGNER", "FREELANCER" ]'>
                             <span class="wrap"></span>
                         </a>
                     </h4>
                     <div class="site-buttons">
                         <div class="d-flex flex-row flex-wrap">
-                            <a class="nav-link" href="#contact"><button type="button" class="btn button primary-button mr-4 text-uppercase">Contact
-                                me</button></a>
-                            <a class="nav-link" href="assets/My_CV.pdf" target="_blank"><button type="button" class="btn button secondary-button text-uppercase">Get cv</button></a>
+                            <a class="nav-link" href="#contact">
+                                <button type="button" class="btn button primary-button mr-4 text-uppercase">Contact
+                                    me
+                                </button>
+                            </a>
+                            <a class="nav-link" href="assets/My_CV.pdf" target="_blank">
+                                <button type="button" class="btn button secondary-button text-uppercase">Get cv</button>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 banner-image">
-                    <img src="img/background/banner-image.png" alt="banner-img" class="img-fluid">
+                    <img id="bannerImg" src="img/background/banner-image.gif" alt="banner-img" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -126,7 +134,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="about-image">
-                        <img src="img/background/AboutUs.gif" alt="About us" class="img-fluid">
+                        <img id="imgBanner2" src="img/background/AboutUs.gif" alt="About us" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 about-title">
@@ -138,13 +146,18 @@
                     <div class="paragraph py-4 w-75">
                         <p class="para">
                             I am a software engineering student who completing the second sem in CMJD
-                            (Certified Master Java Developer) programme in IJSE (Institute of Java Software Engineering).
+                            (Certified Master Java Developer) programme in IJSE (Institute of Java Software
+                            Engineering).
                         </p>
                         <p class="para">
-                            I love building things. While hard engineering problems are often instrinsically fun to takle,
-                            I'm most attracted to solving real customer problems with a business justification. I have completed my
-                            higher education in Prince of Wales College & currently living in 75/A, School lane, Siddamulla,
-                            Piliyandala, Western province, Sri Lanka. postal code - 10304. Looking forward to give you many
+                            I love building things. While hard engineering problems are often instrinsically fun to
+                            takle,
+                            I'm most attracted to solving real customer problems with a business justification. I have
+                            completed my
+                            higher education in Prince of Wales College & currently living in 75/A, School lane,
+                            Siddamulla,
+                            Piliyandala, Western province, Sri Lanka. postal code - 10304. Looking forward to give you
+                            many
                             more IT solutions.
                         </p>
                     </div>
@@ -171,27 +184,27 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
+                                <i class="fab fa-php"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-brand">
+                                <i class="fab fa-node"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-brand">
+                                <i class="fab fa-angular"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-brand">
                                 <i class="fab fa-html5"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-brand">
                                 <i class="fab fa-css3-alt"></i>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-brand">
-                                <i class="fab fa-bootstrap"></i>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-brand">
-                                <i class="fab fa-php"></i>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-brand">
-                                <i class="fab fa-angular"></i>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
@@ -217,9 +230,10 @@
                             </h2>
                         </div>
                         <div class="d-flex flex-row flex-wrap call-area">
-                            <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
+                            <span><i style="cursor: pointer" id="btnContact2"
+                                     class="fas fa-phone-alt fa-3x px-3"></i></span>
                             <div class="call-now">
-                                <a href="#" class="text-uppercase h4 font-roboto">Contact Me</a>
+                                <a class="text-uppercase h4 font-roboto">Contact Me</a>
                                 <span class="font-roboto py-2">(+94)-710-33-77-99</span>
                                 <span class="font-roboto py-2">charakajanithbandarawaththa@gmail.com</span>
                             </div>
@@ -238,7 +252,8 @@
                 <div class="col-lg-12 text-center services-title">
                     <h1 class="text-uppercase title-text">My Best Workings</h1>
                     <p class="para">
-                        I want to discover more about the amazing world of Software Engineering. My goal is to grow as a person and as a professional, every day.
+                        I want to discover more about the amazing world of Software Engineering. My goal is to grow as a
+                        person and as a professional, every day.
                     </p>
                 </div>
             </div>
@@ -252,7 +267,8 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title text-uppercase font-roboto">Standalone Applications</h5>
                                 <p class="card-text text-secondary">
-                                    I have more many experiences in desktop application creation, enhance and maintain in Java language.
+                                    I have more many experiences in desktop application creation, enhance and maintain
+                                    in Java language.
                                 </p>
                             </div>
                         </div>
@@ -265,7 +281,8 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title text-uppercase font-roboto">Client Server Applications</h5>
                                 <p class="card-text text-secondary">
-                                    I have done many more software projects with business logics centralized and using client server architecture.
+                                    I have done many more software projects with business logics centralized and using
+                                    client server architecture.
                                 </p>
                             </div>
                         </div>
@@ -278,7 +295,8 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title text-uppercase font-roboto">web Development</h5>
                                 <p class="card-text text-secondary">
-                                    I have a sound knowledge in creating web based applications using HTML, CSS, JS, PHP.
+                                    I have a sound knowledge in creating web based applications using HTML, CSS, JS,
+                                    PHP.
                                 </p>
                             </div>
                         </div>
@@ -291,7 +309,8 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title text-uppercase font-roboto">Top Quality</h5>
                                 <p class="card-text text-secondary">
-                                    And finally I'm someone that do the best workings for the quality of my software solution development.
+                                    And finally I'm someone that do the best workings for the quality of my software
+                                    solution development.
                                 </p>
                             </div>
                         </div>
@@ -317,7 +336,7 @@
                 <button type="button" data-filter=".application">Web Applications</button>
                 <button type="button" data-filter=".game">little Games</button>
             </div>
-            <div class="row grid">
+            <div id="projectDivs" class="row grid">
                 <div class="col-lg-4 col-md-6 col-sm-12 element-item layout">
                     <div class="our-project">
                         <div class="img">
@@ -326,7 +345,7 @@
                             </a>
                         </div>
                         <div class="title py-4">
-                            <h4 class="text-uppercase">Response web designing</h4>
+                            <h4 class="text-uppercase">Response web</h4>
                             <span class="text-secondary">First web assignment</span>
                         </div>
                     </div>
@@ -352,7 +371,7 @@
                             </a>
                         </div>
                         <div class="title py-4">
-                            <h4 class="text-uppercase">Knight Rider anim</h4>
+                            <h4 class="text-uppercase">Knight Rider</h4>
                             <span class="text-secondary">CSS 3 moving animation</span>
                         </div>
                     </div>
@@ -413,13 +432,95 @@
         </div>
     </section>
     <!--  ======================= End Project Area =============================  -->
+    <!--  ======================== About Me Area ==============================  -->
+    <section class="about-area">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <div class="about-title">
+                        <h1 class="text-uppercase title-h1">What you Say about Me</h1>
+                        <p class="para">
+                            You have watched my Portfolio website and you may know much more about me, please add a
+                            comment below in the comment area and it will be here too
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container carousel py-lg-5">
+            <div class="owl-carousel owl-theme">
+                <div class="client row">
+                    <div class="col-lg-4 col-md-12 client-img">
+                        <img src="img/background/icon.jpg" alt="img1" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8 col-md-12 about-client">
+                        <h4 class="text-uppercase">Charaka Janith</h4>
+                        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
+                            consequuntur ratione, obcaecati corrupti deserunt.</p>
+                    </div>
+                </div>
+                <div class="client row">
+                    <div class="col-lg-4 col-md-12 client-img">
+                        <img src="img/fixedPics/4eaceb7f-1d08-428f-a5f2-fc730ba19d55.jpg" alt="img2" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8 col-md-12 about-client">
+                        <h4 class="text-uppercase">Mac Hill</h4>
+                        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
+                            consequuntur ratione, obcaecati corrupti deserunt.</p>
+                    </div>
+                </div>
+                <div class="client row">
+                    <div class="col-lg-4 col-md-12 client-img">
+                        <img src="img/fixedPics/4420b6f3-18a1-4d82-ae54-c99e88884af7.jpg" alt="img1" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8 col-md-12 about-client">
+                        <h4 class="text-uppercase">John Martin</h4>
+                        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
+                            consequuntur ratione, obcaecati corrupti deserunt.</p>
+                    </div>
+                </div>
+                <div class="client row">
+                    <div class="col-lg-4 col-md-12 client-img">
+                        <img src="img/fixedPics/a99d150e-4b27-46d6-b27c-2caef4b79983.jpg" alt="img2" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8 col-md-12 about-client">
+                        <h4 class="text-uppercase">Mac Hill</h4>
+                        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
+                            consequuntur ratione, obcaecati corrupti deserunt.</p>
+                    </div>
+                </div>
+                <div class="client row">
+                    <div class="col-lg-4 col-md-12 client-img">
+                        <img src="./img/testimonials/t1.jpg" alt="img1" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8 col-md-12 about-client">
+                        <h4 class="text-uppercase">John Martin</h4>
+                        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
+                            consequuntur ratione, obcaecati corrupti deserunt.</p>
+                    </div>
+                </div>
+                <div class="client row">
+                    <div class="col-lg-4 col-md-12 client-img">
+                        <img src="./img/testimonials/t2.jpg" alt="img2" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8 col-md-12 about-client">
+                        <h4 class="text-uppercase">Mac Hill</h4>
+                        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
+                            consequuntur ratione, obcaecati corrupti deserunt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  ======================== End About Me Area ==============================  -->
     <!--  ========================== Subscribe me Area ============================  -->
     <section class="subscribe-us-area" id="comment">
         <div class="container subscribe">
             <div class="row">
                 <div class="col-lg-12 text-center subscribe-title">
                     <h4 class="text-uppercase">Enter to the Comment area</h4>
-                    <p class="para">Thank you for visiting my portfolio and please put a comment in the comment area, I'm really appreciating your suggetions</p>
+                    <p class="para">Thank you for visiting my portfolio and please put a comment in the comment area,
+                        I'm really appreciating your suggetions</p>
                 </div>
             </div>
             <div class="d-sm-flex justify-content-center">
@@ -449,10 +550,17 @@
             </div>
             <div class="social text-center">
                 <h5 class="text-uppercase">Follow me on</h5>
-                <a href="https://stackoverflow.com/users/10982377/charaka-janith?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-                <a href="https://www.linkedin.com/in/charaka-janith-933803179" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/bandarawaththa" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.facebook.com/b.v.charaka.janith" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://stackoverflow.com/users/10982377/charaka-janith?tab=profile" class="mybtn"
+                   target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                <a href="https://www.linkedin.com/in/charaka-janith-933803179" class="mybtn" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/bandarawaththa" class="mybtn" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/b.v.charaka.janith" class="mybtn" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.hackthebox.eu/profile/269679" class="mybtn" target="_blank"><i
+                        class="fas fa-cube"></i></a>
+                <a href="https://www.hackerrank.com/charakajanithba1" class="mybtn" target="_blank"><i
+                        class="fab fa-hackerrank"></i></a>
             </div>
         </div>
     </div>
@@ -470,18 +578,56 @@
 <!--  custom js file  -->
 <script src="./js/main.js"></script>
 <!--  typewrite js file  -->
-<script type="application/javascript"src="js/Typewrite.js"></script>
+<script type="application/javascript" src="js/Typewrite.js"></script>
+<!--  Scrolling scripts  -->
+<script src="js/scroll.js"></script>
 <!--  Preloader scripts  -->
+<script src="preloader/pace.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 <script>
-    $( window ).ready(function() {
-        $('#preloader').css({
-            "display": "none",
+    paceOptions = {
+        ajax: true,
+        document: true,
+        eventLag: false
+    };
+    Pace.on('done', function () {
+        $('.p').delay(500).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19, 1, 0.22, 1]));
+        $('#preloader').delay(1500).animate({top: '-100%'}, 2000, $.bez([0.19, 1, 0.22, 1]));
+        TweenMax.from(".title", 2, {
+            delay: 1.8,
+            y: 10,
+            opacity: 0,
+            ease: Expo.easeInOut
         });
-        $('body').css({
-            "overflow-x": "show",
-            "overflow-y": "auto"
-        });
+        setTimeout(function () {
+            $('header').css({
+                "display": "block"
+            });
+            $('body').css({
+                "overflow": "auto"
+            });
+        }, 1000);
     });
 </script>
+<!--<script>-->
+<!--    $(document).ready(function () {-->
+<!--        setTimeout(function () {-->
+<!--            $('#preloader').css({-->
+<!--                "display": "none"-->
+<!--            });-->
+<!--            $('header').css({-->
+<!--                "display": "block"-->
+<!--            });-->
+<!--            $('body').css({-->
+<!--                // "display":"block",-->
+<!--                // "overflow-x": "show",-->
+<!--                "overflow-y": "auto"-->
+<!--            });-->
+<!--        }, 5000);-->
+<!--    });-->
+<!--</script>-->
+<!--Dark Mode Scripts-->
+<script src="darkMode/Dark.js"></script>
 </body>
 </html>
