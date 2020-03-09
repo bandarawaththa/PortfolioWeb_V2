@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="fontawesome-free-5.12.1-web/css/all.min.css">
     <!--    Dark Mode Styles-->
     <link id="darkStyles" rel="stylesheet" href="darkMode/LightStyle.css">
+    <!--    fonts importing-->
+    <link href="https://fonts.googleapis.com/css?family=Caladea&display=swap" rel="stylesheet">
 </head>
 <body>
 <!--  ======================= Start Preloader Area ============================== -->
@@ -259,10 +261,10 @@
             </div>
             <div class="container services-list">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="serviceBox col-lg-3 col-md-6 col-sm-12">
                         <div class="services">
                             <div class="sevices-img text-center py-4">
-                                <img src="./img/services/s1.png" alt="Services-1">
+                                <i class="fas fa-desktop"></i>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title text-uppercase font-roboto">Standalone Applications</h5>
@@ -273,10 +275,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="serviceBox col-lg-3 col-md-6 col-sm-12">
                         <div class="services">
                             <div class="sevices-img text-center py-4">
-                                <img src="./img/services/s2.png" alt="Services-2">
+                                <i class="fas fa-network-wired"></i>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title text-uppercase font-roboto">Client Server Applications</h5>
@@ -287,10 +289,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="serviceBox col-lg-3 col-md-6 col-sm-12">
                         <div class="services">
                             <div class="sevices-img text-center py-4">
-                                <img src="./img/services/s3.png" alt="Services-3">
+                                <i class="fas fa-spider"></i>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title text-uppercase font-roboto">web Development</h5>
@@ -301,10 +303,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="serviceBox col-lg-3 col-md-6 col-sm-12">
                         <div class="services">
                             <div class="sevices-img text-center py-4">
-                                <img src="./img/services/s4.png" alt="Services-4">
+                                <i class="fas fa-magic"></i>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title text-uppercase font-roboto">Top Quality</h5>
@@ -433,7 +435,7 @@
     </section>
     <!--  ======================= End Project Area =============================  -->
     <!--  ======================== About Me Area ==============================  -->
-    <section class="about-area">
+    <section class="about-area" id="comment">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
@@ -514,7 +516,7 @@
     </section>
     <!--  ======================== End About Me Area ==============================  -->
     <!--  ========================== Subscribe me Area ============================  -->
-    <section class="subscribe-us-area" id="comment">
+    <section id="particles-js" class="subscribe-us-area">
         <div class="container subscribe">
             <div class="row">
                 <div class="col-lg-12 text-center subscribe-title">
@@ -524,18 +526,8 @@
                 </div>
             </div>
             <div class="d-sm-flex justify-content-center">
-                <form class="w-50">
-                    <div class="row d-flex flex-row flex-wrap">
-                        <div class="col input-textbox">
-                            <input type="text" id="txtemail" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="col">
-                            <div class="btn-submit">
-                                <button type="submit" class="btn btn-success float-right">Comments</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <button type="button" class="btn btn-outline-light w-75">Comments
+                </button>
             </div>
         </div>
     </section>
@@ -629,5 +621,8 @@
 <!--</script>-->
 <!--Dark Mode Scripts-->
 <script src="darkMode/Dark.js"></script>
+<!--Partical js-->
+<script src="particlejs/particles.min.js"></script>
+<script src="particlejs/app.js"></script>
 </body>
 </html>
