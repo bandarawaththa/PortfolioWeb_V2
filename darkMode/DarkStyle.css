@@ -7,7 +7,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: black;
+    background: white;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -16,6 +16,10 @@ body {
 
 #preloader {
     background: #000043;
+}
+
+.header_area .main-menu .navbar-toggler span {
+    color: white;
 }
 
 .header_area .main-menu .nav-item .nav-link {
@@ -54,8 +58,8 @@ body {
     color: white;
 }
 
-.site-main > .services-area .services {
-    background: darkblue;
+.site-main > .services-area .services-list .serviceBox {
+    background: #000043;
 }
 
 .site-main .project-area .button-group button {

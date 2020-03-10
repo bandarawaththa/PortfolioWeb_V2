@@ -65,6 +65,10 @@ header {
     width: 100px;
 }
 
+#btnHome {
+    cursor: pointer;
+}
+
 .header_area .main-menu .navbar {
     padding: 1rem 20rem;
 }
@@ -237,15 +241,26 @@ header {
     font-size: 35px;
 }
 
-.site-main > .services-area .services {
-    background: rgba(248, 252, 253, 0.973);
-    padding: 2rem 0;
-    width: 16rem;
-    margin: 5rem .5rem;
-    transition: box-shadow .7s ease;
+.site-main > .services-area .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.site-main > .services-area .serviceBox .services div i {
+.site-main > .services-area .services-list .serviceBox {
+    background: rgba(248, 252, 253, 0.973);
+    position: relative;
+    width: 16rem;
+    /*margin: .5rem .5rem;*/
+    transition: box-shadow .7s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+.site-main > .services-area .services-list .serviceBox .serviceIcon {
     width: 50px;
     height: 50px;
     color: white;
@@ -255,30 +270,51 @@ header {
     border-radius: 50%;
     display: flex;
     font-size: 20px;
+    transition: 1s;
 }
 
-.site-main > .services-area .serviceBox:nth-child(1) .services div i {
+.site-main > .services-area .services-list .serviceBox:hover .card-body, .card-text {
+    color: white;
+}
+
+.card-text:hover {
+    color: white !important;
+}
+
+.site-main > .services-area .services-list .serviceBox:nth-child(1) .serviceIcon {
     box-shadow: 0 0 0 0 purple;
     background: purple;
 }
 
-.site-main > .services-area .serviceBox:nth-child(2) .services div i {
+.site-main > .services-area .services-list .serviceBox:nth-child(2) .serviceIcon {
     box-shadow: 0 0 0 0 darkblue;
     background: darkblue;
 }
 
-.site-main > .services-area .serviceBox:nth-child(3) .services div i {
+.site-main > .services-area .services-list .serviceBox:nth-child(3) .serviceIcon {
     box-shadow: 0 0 0 0 purple;
     background: purple;
 }
 
-.site-main > .services-area .serviceBox:nth-child(4) .services div i {
+.site-main > .services-area .services-list .serviceBox:nth-child(4) .serviceIcon {
     box-shadow: 0 0 0 0 darkblue;
     background: darkblue;
 }
 
-.site-main > .services-area .serviceBox:nth-child(1):hover .services div i {
+.site-main > .services-area .services-list .serviceBox:nth-child(1):hover .serviceIcon {
     box-shadow: 0 0 0 400px purple;
+}
+
+.site-main > .services-area .services-list .serviceBox:nth-child(2):hover .serviceIcon {
+    box-shadow: 0 0 0 400px darkblue;
+}
+
+.site-main > .services-area .services-list .serviceBox:nth-child(3):hover .serviceIcon {
+    box-shadow: 0 0 0 400px purple;
+}
+
+.site-main > .services-area .services-list .serviceBox:nth-child(4):hover .serviceIcon {
+    box-shadow: 0 0 0 400px darkblue;
 }
 
 .site-main > .services-area .serviceBox:hover {
