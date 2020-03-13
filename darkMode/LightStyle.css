@@ -67,7 +67,8 @@
 }
 
 .site-main .subscribe-us-area .subscribe {
-    background: url(../img/background/subscribe-bg.png) no-repeat;
+    /*background: url(../img/background/subscribe-bg.png) no-repeat;*/
+    background: linear-gradient(#a500a5, #000043);
 }
 
 .site-main .subscribe-us-area .subscribe .subscribe-title h4 {
@@ -76,20 +77,6 @@
 
 .site-main .subscribe-us-area .subscribe .subscribe-title p {
     color: whitesmoke;
-}
-
-.site-main .subscribe-us-area .subscribe form .input-textbox input {
-    background: transparent;
-    color: white;
-}
-
-.site-main .subscribe-us-area .subscribe form .input-textbox input::placeholder {
-    color: whitesmoke;
-}
-
-.site-main .subscribe-us-area .subscribe form .btn-submit button {
-    background: whitesmoke;
-    color: #000;
 }
 
 footer .mybtn {

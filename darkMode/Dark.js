@@ -11,8 +11,8 @@ darkButton.addEventListener('click', function () {
     } else {
         css.setAttribute('href', 'darkMode/DarkStyle.css');
         document.getElementById('headerCharaka').setAttribute('src', 'img/background/header/CharakaDark.png');
-        document.getElementById('bannerImg').setAttribute('src', 'img/dark/DarkBanner.gif');
-        document.getElementById('imgBanner2').setAttribute('src', 'img/dark/DarkBanner2.gif');
+        document.getElementById('bannerImg').setAttribute('src', 'img/dark/DarkBanner.png');
+        document.getElementById('imgBanner2').setAttribute('src', 'img/dark/DarkBanner2.png');
         onDark = true;
     }
 });

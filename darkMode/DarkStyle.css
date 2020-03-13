@@ -26,6 +26,11 @@ body {
     color: white;
 }
 
+.header_area .main-menu .navbar {
+    background: #000043;
+    box-shadow: black;
+}
+
 .header_area .main-menu .navbar-nav .active a {
     background: purple;
     -webkit-background-clip: text;
@@ -43,7 +48,7 @@ body {
 }
 
 .site-main .brand-area .first-row .col-lg-4 > .single-brand {
-    color: #000043;
+    color: white;
 }
 
 .site-main .brand-area .experience-area .years-area {
@@ -75,29 +80,7 @@ body {
 }
 
 .site-main .subscribe-us-area .subscribe {
-    background: url(../img/background/subscribe-bg.png) no-repeat;
-}
-
-.site-main .subscribe-us-area .subscribe .subscribe-title h4 {
-    color: #000043;
-}
-
-.site-main .subscribe-us-area .subscribe .subscribe-title p {
-    color: #000043;
-}
-
-.site-main .subscribe-us-area .subscribe form .input-textbox input {
-    background: transparent;
-    color: #000043;
-}
-
-.site-main .subscribe-us-area .subscribe form .input-textbox input::placeholder {
-    color: #000043;
-}
-
-.site-main .subscribe-us-area .subscribe form .btn-submit button {
-    color: #000043;
-    color: #000;
+    background: linear-gradient(purple, darkblue);
 }
 
 footer.footer-area {
@@ -148,7 +131,7 @@ footer .mybtn {
 }
 
 #skills > div > div > div > div > div > div {
-    background: white;
+    background: purple;
 }
 
 .experience-area {
@@ -156,7 +139,7 @@ footer .mybtn {
 }
 
 .call-now {
-    background: #000043 !important;
+    background: transparent !important;
 }
 
 .card-title {

@@ -46,4 +46,10 @@ $(document).ready(function () {
             scrollTop: $("#contact").offset().top
         }, 1500);
     });
+
+    $("#btnContact3").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#contact").offset().top
+        }, 5000);
+    });
 });
